@@ -1,0 +1,24 @@
+<!-- app/src/main/res/values/styles.xml -->
+<resources>
+    <!-- App theme: Material Components -->
+    <style name="Theme.FertiAuto" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- primary / accent colors -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        <!-- optional: Surface, Background -->
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">#263238</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+        <!-- Material date/time components sometimes require this -->
+        <item name="materialCalendarStyle">@style/Widget.MaterialComponents.MaterialCalendar</item>
+    </style>
+
+    <!-- Theme for previews / legacy uses if needed -->
+    <style name="Theme.FertiAuto.NoActionBar" parent="Theme.FertiAuto" />
+</resources>

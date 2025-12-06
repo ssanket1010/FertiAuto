@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "859439353964",
+    "firebase_url": "https://ferti-auto-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ferti-auto",
+    "storage_bucket": "ferti-auto.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859439353964:android:925107c513bbfbad80c849",
+        "android_client_info": {
+          "package_name": "com.example.fertiauto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgeF2ZJDk5WFCBoqqvqfQMSM0W2k-OpG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

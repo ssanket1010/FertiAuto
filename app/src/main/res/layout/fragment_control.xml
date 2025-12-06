@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:background="#ECEFF1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/labelMotors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Control Panel"
+            android:textColor="#263238"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <!-- TOP MOTORS CARD (unchanged) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/card_bg"
+            android:layout_marginTop="14dp">
+
+            <TextView
+                android:id="@+id/m1Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fertilizer"
+                android:textSize="15sp"
+                android:textColor="#37474F"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <SeekBar
+                    android:id="@+id/seekMotor1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="255" />
+
+                <TextView
+                    android:id="@+id/pct1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="#455A64"
+                    android:textSize="14sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/m2Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pesticides"
+                android:textSize="15sp"
+                android:textColor="#37474F"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <SeekBar
+                    android:id="@+id/seekMotor2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="255" />
+
+                <TextView
+                    android:id="@+id/pct2"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="#455A64"
+                    android:textSize="14sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/m3Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nutrient"
+                android:textSize="15sp"
+                android:textColor="#37474F"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <SeekBar
+                    android:id="@+id/seekMotor3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="100" />
+
+                <TextView
+                    android:id="@+id/pct3"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="#455A64"
+                    android:textSize="14sp"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnMotorToggle"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="STOP ALL"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="#D32F2F"
+            android:foregroundTint="#FFFFFF" />
+
+        <!-- Valve card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/card_bg"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valve Control"
+                android:textColor="#37474F"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnValve1Toggle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:text="SECTION A OFF" />
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/btnValve2Toggle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:text="SECTION B OFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- FLOW SENSOR CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/card_bg"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flow Monitor"
+                android:textColor="#37474F"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtFlow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flow: 0.00 L/min"
+                android:textColor="#00796B"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+
+        <!--SCHEDULER CARD -->
+        <LinearLayout
+            android:id="@+id/scheduleCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/card_bg"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motor Scheduling"
+                android:textColor="#37474F"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <!-- Set Motor Levels instead of motor spinner -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Motor Levels"
+                android:textColor="#37474F"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <!-- Motor 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fertilizer %"
+                android:textColor="#37474F"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp" />
+
+            <SeekBar
+                android:id="@+id/scheduleSeek1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255" />
+
+            <TextView
+                android:id="@+id/schedulePct1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="13sp"
+                android:textColor="#607D8B"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Motor 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pesticides %"
+                android:textColor="#37474F"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/scheduleSeek2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255" />
+
+            <TextView
+                android:id="@+id/schedulePct2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="13sp"
+                android:textColor="#607D8B"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Motor 3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nutrients%"
+                android:textColor="#37474F"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/scheduleSeek3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100" />
+
+            <TextView
+                android:id="@+id/schedulePct3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="13sp"
+                android:textColor="#607D8B"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Date Picker Button -->
+            <Button
+                android:id="@+id/btnPickDate"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Select Date"
+                android:textSize="15sp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#0288D1"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <!-- Time Picker Button -->
+            <Button
+                android:id="@+id/btnPickTime"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Select Time"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#0288D1"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <!-- Repeat -->
+            <Spinner
+                android:id="@+id/spinnerRepeat"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/editbox_dropdown_light_frame" />
+
+            <!-- Save -->
+            <Button
+                android:id="@+id/btnSaveSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="SAVE SCHEDULE"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:backgroundTint="#00796B"
+                android:layout_marginTop="14dp" />
+
+        </LinearLayout>
+
+        <!-- UPCOMING SCHEDULES -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Tasks"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#263238"
+            android:layout_marginTop="18dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSchedules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="System Status: Idle"
+            android:textColor="#607D8B"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:paddingTop="18dp"
+            android:paddingBottom="30dp" />
+
+    </LinearLayout>
+</ScrollView>

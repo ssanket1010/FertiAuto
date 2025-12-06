@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- Welcome title -->
         <TextView
             android:id="@+id/welcomeName"
             android:layout_width="wrap_content"
@@ -26,12 +27,12 @@
             android:id="@+id/homeSubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Weather &amp; field overview"
+            android:text="Weather  field overview"
             android:textSize="14sp"
             android:textColor="#546E7A"
             android:layout_marginTop="4dp"/>
 
-        <!-- Weather card (2x2 grid) -->
+        <!-- WEATHER CARD -->
         <androidx.cardview.widget.CardView
             android:id="@+id/weatherCard"
             android:layout_width="match_parent"
@@ -39,7 +40,6 @@
             android:layout_marginTop="16dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="8dp"
-            android:foreground="?attr/selectableItemBackground"
             app:cardUseCompatPadding="true">
 
             <GridLayout
@@ -52,7 +52,7 @@
                 android:alignmentMode="alignMargins"
                 android:columnOrderPreserved="false">
 
-                <!-- Top-left: Temperature -->
+                <!-- Temperature -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -67,8 +67,8 @@
                         android:id="@+id/iconTemp"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:contentDescription="weather icon"
-                        android:src="@drawable/ic_wb_sunny" />
+                        android:src="@drawable/ic_wb_sunny"
+                        android:contentDescription="temperature icon" />
 
                     <TextView
                         android:id="@+id/homeTemp"
@@ -81,7 +81,7 @@
                         android:textColor="#263238"/>
                 </LinearLayout>
 
-                <!-- Top-right: Humidity -->
+                <!-- Humidity -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -96,8 +96,8 @@
                         android:id="@+id/iconHumidity"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:contentDescription="humidity icon"
-                        android:src="@drawable/ic_opacity" />
+                        android:src="@drawable/ic_opacity"
+                        android:contentDescription="humidity icon" />
 
                     <TextView
                         android:id="@+id/homeHumidity"
@@ -108,7 +108,7 @@
                         android:textColor="#263238"/>
                 </LinearLayout>
 
-                <!-- Bottom-left: Wind -->
+                <!-- Wind -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -123,8 +123,8 @@
                         android:id="@+id/iconWind"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:contentDescription="wind icon"
-                        android:src="@drawable/ic_air" />
+                        android:src="@drawable/ic_air"
+                        android:contentDescription="wind icon" />
 
                     <TextView
                         android:id="@+id/homeWind"
@@ -135,7 +135,7 @@
                         android:textColor="#263238"/>
                 </LinearLayout>
 
-                <!-- Bottom-right: Rain -->
+                <!-- Rain -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -150,8 +150,8 @@
                         android:id="@+id/iconRain"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:contentDescription="rain icon"
-                        android:src="@drawable/ic_grain" />
+                        android:src="@drawable/ic_grain"
+                        android:contentDescription="rain icon" />
 
                     <TextView
                         android:id="@+id/homeRain"
@@ -165,7 +165,7 @@
             </GridLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Tip card -->
+        <!-- TIP CARD -->
         <androidx.cardview.widget.CardView
             android:id="@+id/tipCard"
             android:layout_width="match_parent"
@@ -186,8 +186,8 @@
                     android:id="@+id/iconTip"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:contentDescription="tip icon"
-                    android:src="@drawable/ic_lightbulb" />
+                    android:src="@drawable/ic_lightbulb"
+                    android:contentDescription="tip icon" />
 
                 <TextView
                     android:id="@+id/homeTip"
@@ -197,6 +197,40 @@
                     android:layout_weight="1"
                     android:text="Tip: Check moisture and pH before scheduling fertilizer."
                     android:textColor="#263238"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- UPCOMING SCHEDULES CARD -->
+        <!-- UPCOMING SCHEDULES CARD -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/upcomingCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upcoming Tasks"
+                    android:textStyle="bold"
+                    android:textColor="#263238"
+                    android:textSize="18sp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvUpcoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginTop="10dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
